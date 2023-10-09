@@ -1,13 +1,11 @@
-'''Python'''
+'''boa'''
 from datetime import date
-class Python:
-    '''PYTHON'''
-    def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
-        self.slithering = True
-        self.food = food
+
+from animal import Animal
+
+class BoaConstrictor(Animal):
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
     def feed(self):
         '''feeding function'''
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
