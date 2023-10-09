@@ -1,13 +1,12 @@
-'''turtle'''
+'''kingsnake'''
 from datetime import date
-class Turtle:
-    '''TURTLE'''
-    def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
-        self.swimming = True
-        self.food = food
+
+from animal import Animal
+
+class KingSnake(Animal):
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
+
     def feed(self):
         '''feeding function'''
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
