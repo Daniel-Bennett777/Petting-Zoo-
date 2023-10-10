@@ -1,5 +1,5 @@
 '''LLAMA DOC'''
-from animal import Animal
+from .animal import Animal
 
 
 
@@ -10,5 +10,5 @@ class Llama(Animal):
         super().__init__(name, species, food, chip_num)
         self.shift = shift  # Unique to Llama
         self.walking = True  # Unique to Llama
-    
+        self.walk_speed = 4
         
